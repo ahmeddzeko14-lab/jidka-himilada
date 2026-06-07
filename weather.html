@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard - Jidka Himilada</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>🏔️ Jidka Himilada</h1>
+                <p class="tagline">Hagaha Guusha G Horumarka</p>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Hore</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">Naga Iska Dheh</a></li>
+                <li><a href="contact.html">La Xidhiidhka</a></li>
+                <li><a href="todo.html">Todo</a></li>
+                <li><a href="weather.html" class="active">Weather</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>🌤️ Weather Dashboard - Haweenka Cimada</h1>
+            <p>Raadi cimada magaalooyinka caalamiga ah</p>
+        </div>
+    </section>
+
+    <!-- Weather App -->
+    <div class="container main-content">
+        <div class="weather-wrapper">
+            <!-- Search Section -->
+            <div class="weather-search">
+                <input 
+                    type="text" 
+                    id="cityInput" 
+                    class="city-input" 
+                    placeholder="Magaalada raadi..."
+                    value="Mogadishu">
+                <button class="btn btn-primary" onclick="searchWeather()">
+                    <i class="fas fa-search"></i> Raadi
+                </button>
+            </div>
+
+            <!-- Current Weather -->
+            <div class="weather-current" id="currentWeather"></div>
+
+            <!-- Error Message -->
+            <div class="weather-error" id="weatherError" style="display: none;">
+                <i class="fas fa-exclamation-circle"></i>
+                <p id="errorMessage"></p>
+            </div>
+
+            <!-- Loading State -->
+            <div class="weather-loading" id="weatherLoading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Cimada lagu raadiye...</p>
+            </div>
+
+            <!-- 5-Day Forecast -->
+            <div class="weather-forecast" id="forecastSection" style="display: none;">
+                <h2>5-Maalin Shaqqiga</h2>
+                <div class="forecast-grid" id="forecastGrid"></div>
+            </div>
+
+            <!-- Weather Details -->
+            <div class="weather-details" id="weatherDetails" style="display: none;">
+                <h2>Xogta Cimada</h2>
+                <div class="details-grid">
+                    <div class="detail-card">
+                        <i class="fas fa-droplet"></i>
+                        <h3>Quluul-goob</h3>
+                        <p id="humidityValue">-</p>
+                    </div>
+                    <div class="detail-card">
+                        <i class="fas fa-wind"></i>
+                        <h3>Dabaysha</h3>
+                        <p id="windValue">-</p>
+                    </div>
+                    <div class="detail-card">
+                        <i class="fas fa-eye"></i>
+                        <h3>Daawinta</h3>
+                        <p id="visibilityValue">-</p>
+                    </div>
+                    <div class="detail-card">
+                        <i class="fas fa-gauge"></i>
+                        <h3>Carrabka</h3>
+                        <p id="pressureValue">-</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Jidka Himilada</h4>
+                    <p>Blog loogu talagalay horumarinta bulshada Soomaaliyeed.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Xiriir</h4>
+                    <ul>
+                        <li><a href="index.html">Hore</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">Naga Iska Dheh</a></li>
+                        <li><a href="contact.html">La Xidhiidhka</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li><a href="todo.html">Todo App</a></li>
+                        <li><a href="weather.html">Weather</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Jidka Himilada - Ahmed Galayr. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="weather.js"></script>
+</body>
+</html>
