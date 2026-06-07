@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App - Jidka Himilada</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>🏔️ Jidka Himilada</h1>
+                <p class="tagline">Hagaha Guusha G Horumarka</p>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Hore</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">Naga Iska Dheh</a></li>
+                <li><a href="contact.html">La Xidhiidhka</a></li>
+                <li><a href="todo.html" class="active">Todo</a></li>
+                <li><a href="weather.html">Weather</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>✅ Todo App - Qorshaha Yoomiyo</h1>
+            <p>Samee liiska shaqa iyo horumarka yoomiyo-yoomiyo</p>
+        </div>
+    </section>
+
+    <!-- Todo App -->
+    <div class="container main-content">
+        <div class="todo-wrapper">
+            <div class="todo-container">
+                <h2>Shaqa-Yoomiyo</h2>
+                
+                <!-- Input Section -->
+                <div class="todo-input-section">
+                    <input 
+                        type="text" 
+                        id="todoInput" 
+                        class="todo-input" 
+                        placeholder="Shaqa cusub ku qor...">
+                    <button class="btn btn-primary" onclick="addTodo()">
+                        <i class="fas fa-plus"></i> Ku Dar
+                    </button>
+                </div>
+
+                <!-- Filter Buttons -->
+                <div class="todo-filters">
+                    <button class="filter-btn active" onclick="filterTodos('all')">Dhamaan</button>
+                    <button class="filter-btn" onclick="filterTodos('active')">Socdaal</button>
+                    <button class="filter-btn" onclick="filterTodos('completed')">Dhameeystay</button>
+                </div>
+
+                <!-- Todo List -->
+                <div class="todo-list" id="todoList"></div>
+
+                <!-- Empty State -->
+                <div class="empty-state" id="emptyState" style="display: none;">
+                    <i class="fas fa-inbox"></i>
+                    <p>Shaqa ma joog. Shaqa cusub ku dar!</p>
+                </div>
+
+                <!-- Stats -->
+                <div class="todo-stats">
+                    <div class="stat">
+                        <span class="stat-label">Guud:</span>
+                        <span class="stat-value" id="totalCount">0</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Socdaal:</span>
+                        <span class="stat-value" id="activeCount">0</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Dhameeystay:</span>
+                        <span class="stat-value" id="completedCount">0</span>
+                    </div>
+                </div>
+
+                <!-- Clear Completed -->
+                <button class="btn btn-secondary" onclick="clearCompleted()" style="width: 100%; margin-top: 20px;">
+                    <i class="fas fa-trash"></i> Tir Dhameeystay
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Jidka Himilada</h4>
+                    <p>Blog loogu talagalay horumarinta bulshada Soomaaliyeed.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Xiriir</h4>
+                    <ul>
+                        <li><a href="index.html">Hore</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">Naga Iska Dheh</a></li>
+                        <li><a href="contact.html">La Xidhiidhka</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li><a href="todo.html">Todo App</a></li>
+                        <li><a href="weather.html">Weather</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Jidka Himilada - Ahmed Galayr. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="todo.js"></script>
+</body>
+</html>
